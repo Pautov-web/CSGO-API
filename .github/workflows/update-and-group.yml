@@ -23,6 +23,8 @@ concurrency:
 jobs:
   update-and-group:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     env:
       LANGUAGES: ${{ github.event.inputs.languages || vars.LANGUAGES }}
